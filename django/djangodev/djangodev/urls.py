@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from apps.core.views import data_flair, index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('redirect/', data_flair, name='data_flair'),
+    path('dataflair/', index, name='index'),
 ]
