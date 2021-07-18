@@ -7,6 +7,8 @@ def regForm(request):
     if request.method == 'POST':
         form = forms.signUp(request.POST)
         html = 'we have received this form again'
+        if form.is_valid():
+            html = html + "The form is valid"
     else:
         html = 'wellcome for first time'
 
